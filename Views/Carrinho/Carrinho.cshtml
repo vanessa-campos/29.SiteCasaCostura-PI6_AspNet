@@ -1,0 +1,58 @@
+@model ICollection<Carrinho>
+@{
+    ViewData["Title"] = "Carrinho";
+}
+
+<div class="row">                    
+    
+<div class="col p-md-5 p-sm-0 justify-content-center">
+    <h1 class="text-center my-md-3 my-sm-2" style="color: #f06eaa"><b>CARRINHO DE ORÇAMENTO</b></h1>    
+    @if(Model.Count > 0){      
+    <div class="d-flex justify-content-center pt-2">  
+            <div class="table-responsive-sm col-md-10 col-sm-4">   
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="col-3">Nome do Produto</th>
+                                <th class="col-3">Descrição</th>
+                                <th class="col-2">Tamanho</th>
+                                <th class="col-1 text-center"></th>
+                                <th class="col-1 text-center">Und</th>
+                                <th class="col-1 text-center"></th>
+                                <th class="col-1 text-center"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (Carrinho car in Model){
+                            <tr>
+                                <td class="col-3">@car.ProdutoNome</td>                            
+                                <td class="col-3">@car.ProdutoDescricao</td>                            
+                                <td class="col-2">@car.ProdutoTamanho</td>                            
+                                <td class="col-1 text-center"><a class="btn btn-light text-white" href="/Carrinho/Diminuir?Id=@car.Id" style="background-color: #f06eaa;">-</a>
+                                <td class="col-1 text-center">@car.Quantidade</td>
+                                <td class="col-1 text-center"><a class="btn btn-light text-white" href="/Carrinho/Aumentar?Id=@car.Id" style="background-color: #f06eaa;">+</a>
+                                <td class="col-1 text-center"><a class="btn btn-light text-white" href="/Carrinho/Excluir?Id=@car.Id" style="background-color: #f06eaa;" 
+                                    onclick="return confirm('Deseja remover o item do carrinho?');">Remover</a>
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>    
+            </div>
+    </div>
+
+    <ul class="pagination col-12 justify-content-md-center">
+        @for (int i = 1; i <= (int)ViewData["Pages"]; i++){
+            <li class="page-item"><a class="page-link btn btn-light text-white mx-1" href="/Carrinho/Carrinho/?p=@i" style="background-color: #f06eaa;">@i</a></li>
+        }
+    </ul>
+  
+    <div class="col-12 d-flex justify-content-md-center pt-2 mx-3"> 
+        <a class="btn btn-light text-white mx-1" style="background-color: #f06eaa;" href="/Carrinho/Orcamento">Concluir Orçamento</a>
+        <a class="btn btn-light text-white mx-1" style="background-color: #f06eaa;" href="/Carrinho/Produtos">Continuar Comprando</a>
+    </div>                 
+    }else{    
+        <p class="pt-4">Nenhum registro encontrado!</p>
+    } 
+</div>      
+</div>

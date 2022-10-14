@@ -1,0 +1,38 @@
+@model Atendimento
+@{
+    ViewData["Title"] = "Edição Atendimento";
+}
+
+<div class="row">    
+    <div class="col p-5 justify-content-center">
+        <h1 class="text-center my-2" style="color: #f06eaa"><b>EDIÇÃO DE ATENDIMENTO</b></h1>
+        <div class="row justify-content-md-center pt-5 pb-3">
+            <form asp-action="Solicitar" method="POST" class="col-md-4">                
+                <input type="hidden" asp-for="Id" />
+                <fieldset>
+                    <div class="form-group">
+                        <label asp-for="Nome">Nome: </label>
+                        <input asp-for="Nome" class="form-control"/>
+                    </div>                     
+                    <div class="form-group">                    
+                        <label asp-for="Email">E-mail: </label>
+                        <input type="email" asp-for="Email" class="form-control"/>
+                    </div>
+                    <div class="form-group">                    
+                        <label asp-for="Telefone">Telefone: </label>
+                        <input type="tel" asp-for="Telefone" class="form-control" pattern="[0-9]{2}[0-9]{5}[0-9]{4}"/>
+                    </div>            
+                    <div class="form-group">
+                        <label asp-for="Mensagem">Mensagem: </label>
+                        <textarea rows="5" asp-for="Mensagem" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Atendido">Atendimento Resolvido: </label>          
+                        <input type="checkbox" asp-for="Atendido" class="form-check-input mx-2"/>
+                    </div>
+                </fieldset>
+                <input type="submit" value="Salvar" class="btn btn-light text-white my-2" style="background-color: #f06eaa;"/>
+            </form>
+        </div>
+    </div>
+</div>

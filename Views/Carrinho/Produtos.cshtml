@@ -1,0 +1,107 @@
+@model List<Produto>
+@{
+    ViewData["Title"] = "Produtos";
+}
+
+<div class="row">
+    <div class="col pt-5 justify-content-center">
+        <h1 class="text-center my-2" style="color: #f06eaa"><b>TECIDOS</b></h1>
+        <div class="d-flex flex-wrap justify-content-center py-3">
+            <div class="card bg-light p-2 m-3" style="width: 18rem; border-radius: 2rem;">
+                <img src="~/imagens/tecidotricolineliso.png" class="card-img-top p-1" style="border: solid 2px #f06eaa; border-radius: 2rem; height: 250px; width: 100%;"  alt="tricoline">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #f06eaa">@Model[0].Nome</h5>
+                    <p class="card-text"><b>Descrição: </b>@Model[0].Descricao</p>
+                    <p class="card-text"><b>Tamanho: </b>@Model[0].Tamanho</p>
+                    <a href="/Carrinho/Adicionar?Produto=@Model[0].Nome&Descricao=@Model[0].Descricao&Tamanho=@Model[0].Tamanho" class="btn btn-light text-white" style="background-color: #f06eaa;">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+            <div class="card bg-light p-2 m-3" style="width: 18rem; border-radius: 2rem;">
+                <img src="~/imagens/tecidojacquardfloral.png" class="card-img-top p-1" style="border: solid 2px #f06eaa; border-radius: 2rem; height: 250px; width: 100%;"  alt="jacquard floral">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #f06eaa">@Model[1].Nome</h5>
+                    <p class="card-text"><b>Descrição: </b>@Model[1].Descricao</p>
+                    <p class="card-text"><b>Tamanho: </b>@Model[1].Tamanho</p>                    
+                    <a href="/Carrinho/Adicionar?Produto=@Model[1].Nome&Descricao=@Model[1].Descricao&Tamanho=@Model[1].Tamanho" class="btn btn-light text-white" style="background-color: #f06eaa;">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+            <div class="card bg-light p-2 m-3" style="width: 18rem; border-radius: 2rem;">
+                <img src="~/imagens/plasticotermicoxadrez.png" class="card-img-top p-1" style="border: solid 2px #f06eaa; border-radius: 2rem; height: 250px; width: 100%;"  alt="plastico">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #f06eaa">@Model[2].Nome</h5>
+                    <p class="card-text"><b>Descrição: </b>@Model[2].Descricao</p>
+                    <p class="card-text"><b>Tamanho: </b>@Model[2].Tamanho</p>
+                    <a href="/Carrinho/Adicionar?Produto=@Model[2].Nome&Descricao=@Model[2].Descricao&Tamanho=@Model[2].Tamanho" class="btn btn-light text-white" style="background-color: #f06eaa;">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+        </div>  
+    </div> 
+</div>
+<div class="row">
+    <div class="col pt-5 justify-content-center">
+        <h1 class="text-center my-2" style="color: #f06eaa"><b>BOTÕES</b></h1>
+        <div class="d-flex flex-wrap justify-content-center py-3">
+            <div class="card bg-light p-2 m-3" style="width: 18rem; border-radius: 2rem;">
+                <img src="~/imagens/botao2furoscor.jpg" class="card-img-top p-1" style="border: solid 2px #f06eaa; border-radius: 2rem; height: 250px; width: 100%;"  alt="botao 2 furos">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #f06eaa">@Model[3].Nome</h5>
+                    <p class="card-text"><b>Descrição: </b>@Model[3].Descricao</p>
+                    <p class="card-text"><b>Tamanho: </b>@Model[3].Tamanho</p>
+                    <a href="/Carrinho/Adicionar?Produto=@Model[3].Nome&Descricao=@Model[3].Descricao&Tamanho=@Model[3].Tamanho" class="btn btn-light text-white" style="background-color: #f06eaa;">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+            <div class="card bg-light p-2 m-3" style="width: 18rem; border-radius: 2rem;">
+                <img src="~/imagens/botao4furostransparente.jpg" class="card-img-top p-1" style="border: solid 2px #f06eaa; border-radius: 2rem; height: 250px; width: 100%;"  alt="botao 2 furos">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #f06eaa">@Model[4].Nome</h5>
+                    <p class="card-text"><b>Descrição: </b>@Model[4].Descricao</p>
+                    <p class="card-text"><b>Tamanho: </b>@Model[4].Tamanho</p>
+                    <a href="/Carrinho/Adicionar?Produto=@Model[4].Nome&Descricao=@Model[4].Descricao&Tamanho=@Model[4].Tamanho" class="btn btn-light text-white" style="background-color: #f06eaa;">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+            <div class="card bg-light p-2 m-3" style="width: 18rem; border-radius: 2rem;">
+                <img src="~/imagens/botao4furosperolado.jpg" class="card-img-top p-1" style="border: solid 2px #f06eaa; border-radius: 2rem; height: 250px; width: 100%;"  alt="botao 4 furos">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #f06eaa">@Model[5].Nome</h5>
+                    <p class="card-text"><b>Descrição: </b>@Model[5].Descricao</p>
+                    <p class="card-text"><b>Tamanho: </b>@Model[5].Tamanho</p>
+                    <a href="/Carrinho/Adicionar?Produto=@Model[5].Nome&Descricao=@Model[5].Descricao&Tamanho=@Model[5].Tamanho" class="btn btn-light text-white" style="background-color: #f06eaa;">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+        </div>  
+    </div> 
+</div>
+<div class="row">
+    <div class="col p-5 justify-content-center">
+        <h1 class="text-center my-2" style="color: #f06eaa"><b>LINHAS</b></h1>
+        <div class="d-flex flex-wrap justify-content-center py-3">
+            <div class="card bg-light p-2 m-3" style="width: 18rem; border-radius: 2rem;">
+                <img src="~/imagens/linhacostura.png" class="card-img-top p-1" style="border: solid 2px #f06eaa; border-radius: 2rem; height: 250px; width: 100%;"  alt="linha costura">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #f06eaa">@Model[6].Nome</h5>
+                    <p class="card-text"><b>Descrição: </b>@Model[6].Descricao</p>
+                    <p class="card-text"><b>Tamanho: </b>@Model[6].Tamanho</p>
+                    <a href="/Carrinho/Adicionar?Produto=@Model[6].Nome&Descricao=@Model[6].Descricao&Tamanho=@Model[6].Tamanho" class="btn btn-light text-white" style="background-color: #f06eaa;">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+            <div class="card bg-light p-2 m-3" style="width: 18rem; border-radius: 2rem;">
+                <img src="~/imagens/linhapesponto.png" class="card-img-top p-1" style="border: solid 2px #f06eaa; border-radius: 2rem; height: 250px; width: 100%;"  alt="linha pesponto">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #f06eaa">@Model[7].Nome</h5>
+                    <p class="card-text"><b>Descrição: </b>@Model[7].Descricao</p>
+                    <p class="card-text"><b>Tamanho: </b>@Model[7].Tamanho</p>
+                    <a href="/Carrinho/Adicionar?Produto=@Model[7].Nome&Descricao=@Model[7].Descricao&Tamanho=@Model[7].Tamanho" class="btn btn-light text-white" style="background-color: #f06eaa;">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+            <div class="card bg-light p-2 m-3" style="width: 18rem; border-radius: 2rem;">
+                <img src="~/imagens/linhacroche.png" class="card-img-top p-1" style="border: solid 2px #f06eaa; border-radius: 2rem; height: 250px; width: 100%;"  alt="linha corche">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #f06eaa">@Model[8].Nome</h5>
+                    <p class="card-text"><b>Descrição: </b>@Model[8].Descricao</p>
+                    <p class="card-text"><b>Tamanho: </b>@Model[8].Tamanho</p>
+                    <a href="/Carrinho/Adicionar?Produto=@Model[8].Nome&Descricao=@Model[8].Descricao&Tamanho=@Model[8].Tamanho" class="btn btn-light text-white" style="background-color: #f06eaa;">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+        </div>  
+    </div> 
+</div>   

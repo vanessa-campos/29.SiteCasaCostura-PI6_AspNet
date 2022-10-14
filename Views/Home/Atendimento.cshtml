@@ -1,0 +1,48 @@
+@model ICollection<Atendimento>
+@{
+    ViewData["Title"] = "Atendimentos";
+}
+
+<div class="row">    
+    <div class="col pt-2 mx-3 justify-content-center">
+        <h1 class="text-center my-5" style="color: #f06eaa"><b>ATENDIMENTOS SOLICITADOS</b></h1>
+        <div class="table-responsive-sm col-md-12 col-sm-4">        
+            @if(Model.Count > 0){
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th class="col-1">Id</th>
+                            <th class="col-2">Nome</th>
+                            <th class="col-2">Email</th>
+                            <th class="col-2">Telefone</th>
+                            <th class="col-4">Mensagem</th>
+                            <th class="col-1"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (Atendimento e in Model){
+                            <tr>
+                                <td class="col-1">@e.Id</td>
+                                <td class="col-2">@e.Nome</td>
+                                <td class="col-2">@e.Email</td>
+                                <td class="col-2">@e.Telefone</td>
+                                <td class="col-4">@e.Mensagem</td>
+                                <td class="col-1"><a class="page-link btn btn-light text-white" href="/Home/Editar/@e.Id" style="background-color: #f06eaa;">Editar</a></td>
+                            </tr>   
+                        }  
+                    </tbody>   
+                </table>             
+            }else{    
+                <p>Nenhum registro encontrado!</p>
+            } 
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <ul class="pagination col-12 justify-content-center " style="margin:20px 0">
+        @for (int i = 1; i <= (int)ViewData["Pages"]; i++){
+            <li class="page-item"><a class="page-link btn btn-light text-white m-2" href="/Home/Atendimento/?p=@i" style="background-color: #f06eaa;">@i</a></li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,55 @@
+@model List<Produto>
+@{
+    ViewData["Title"] = "Exclusivos";
+}
+
+<div class="row">
+    <div class="col pt-5 justify-content-center">
+        <h1 class="text-center my-2" style="color: #f06eaa"><b>ORIGINAIS CASA DA COSTURA</b></h1>
+        <div class="d-flex flex-wrap justify-content-center py-3">
+            <div class="card bg-light p-2 m-3" style="width: 18rem; border-radius: 2rem;">
+                <img src="~/imagens/cortinavoil.png" class="card-img-top p-1" style="border: solid 2px #f06eaa; border-radius: 2rem; height: 250px; width: 100%;"  alt="cortina">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #f06eaa">@Model[9].Nome</h5>
+                    <p class="card-text"><b>Descrição: </b>@Model[9].Descricao</p>
+                    <p class="card-text"><b>Tamanho: </b>@Model[9].Tamanho</p>
+                    <a href="/Carrinho/Adicionar?Produto=@Model[9].Nome&Descricao=@Model[9].Descricao&Tamanho=@Model[9].Tamanho" class="btn btn-light text-white" style="background-color: #f06eaa;">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+            <div class="card bg-light p-2 m-3" style="width: 18rem; border-radius: 2rem;">
+                <img src="~/imagens/capacadeira.png" class="card-img-top p-1" style="border: solid 2px #f06eaa; border-radius: 2rem; height: 250px; width: 100%;"  alt="capa cadeira">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #f06eaa">@Model[10].Nome</h5>
+                    <p class="card-text"><b>Descrição: </b>@Model[10].Descricao</p>
+                    <p class="card-text"><b>Tamanho: </b>@Model[10].Tamanho</p>
+                    <a href="/Carrinho/Adicionar?Produto=@Model[10].Nome&Descricao=@Model[10].Descricao&Tamanho=@Model[10].Tamanho" class="btn btn-light text-white" style="background-color: #f06eaa;">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+        </div>  
+    </div> 
+</div>
+<div class="row">
+    <div class="col p-5 justify-content-center">
+        <h1 class="text-center my-2" style="color: #f06eaa"><b>ORIGINAIS PARCEIROS</b></h1>
+        <div class="d-flex flex-wrap justify-content-center py-3">
+            <div class="card bg-light p-2 m-3" style="width: 18rem; border-radius: 2rem;">
+                <img src="~/imagens/panodepratopintado.jpg" class="card-img-top p-1" style="border: solid 2px #f06eaa; border-radius: 2rem; height: 250px; width: 100%;"  alt="pano de prato">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #f06eaa">@Model[11].Nome</h5>
+                    <p class="card-text"><b>Descrição: </b>@Model[11].Descricao</p>
+                    <p class="card-text"><b>Tamanho: </b>@Model[11].Tamanho</p>
+                    <a href="/Carrinho/Adicionar?Produto=@Model[11].Nome&Descricao=@Model[11].Descricao&Tamanho=@Model[11].Tamanho" class="btn btn-light text-white" style="background-color: #f06eaa;">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+            <div class="card bg-light p-2 m-3" style="width: 18rem; border-radius: 2rem;">
+                <img src="~/imagens/toalhabordada.png" class="card-img-top p-1" style="border: solid 2px #f06eaa; border-radius: 2rem; height: 250px; width: 100%;"  alt="toalha bordada">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #f06eaa">@Model[12].Nome</h5>
+                    <p class="card-text"><b>Descrição: </b>@Model[12].Descricao</p>
+                    <p class="card-text"><b>Tamanho: </b>@Model[12].Tamanho</p>
+                    <a href="/Carrinho/Adicionar?Produto=@Model[12].Nome&Descricao=@Model[12].Descricao&Tamanho=@Model[12].Tamanho" class="btn btn-light text-white" style="background-color: #f06eaa;">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

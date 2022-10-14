@@ -1,0 +1,33 @@
+@model Usuario
+@{
+    ViewData["Title"] = "Minha Conta";
+}
+
+<div class="row">        
+<div class="col p-5 justify-content-center">
+    <h1 class="text-center my-2" style="color: #f06eaa"><b>MINHA CONTA</b></h1>
+    <div class="d-flex flex-wrap justify-content-center py-3">
+        <div class="card bg-light col-md-4 p-2 m-3 justify-content-md-center" style="width: 100%; border-radius: 2rem;">            
+            <input type="hidden" asp-for="Id" />
+            <div class="card-body">
+                <h5 class="card-title" style="color: #f06eaa">Nome</h5>
+                <p class="card-text">@Model.Nome</p>                   
+                <h5 class="card-title" style="color: #f06eaa">Login</h5>
+                <p class="card-text">@Model.Login</p>    
+                <h5 class="card-title" style="color: #f06eaa">Senha</h5>
+                <p class="card-text">@Model.Senha</p>    
+                <h5 class="card-title" style="color: #f06eaa">Data de Nascimento</h5>
+                <p class="card-text">@Model.DataNascimento</p>                
+                <h5 class="card-title" style="color: #f06eaa">Telefone</h5>
+                <p class="card-text">@Model.Telefone</p>     
+                <h5 class="card-title" style="color: #f06eaa">CEP</h5>
+                <p class="card-text">@Model.Cep</p>    
+                <h5 class="card-title" style="color: #f06eaa">Endereço Completo</h5>
+                <p class="card-text">@Model.Endereco</p>    
+                <a class="btn btn-light text-white" href="/Usuario/Edicao/@Model.Id" style="background-color: #f06eaa;">Editar</a>
+                <a class="btn btn-light text-white ms-2" href="/Usuario/Excluir/@Model.Id" style="background-color: #f06eaa;">Excluir</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
